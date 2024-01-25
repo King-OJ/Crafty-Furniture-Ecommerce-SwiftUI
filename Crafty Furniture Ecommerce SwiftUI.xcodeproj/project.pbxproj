@@ -11,6 +11,30 @@
 		B01006262B5EB77100C9E278 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01006252B5EB77100C9E278 /* ContentView.swift */; };
 		B01006282B5EB77800C9E278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01006272B5EB77800C9E278 /* Assets.xcassets */; };
 		B010062B2B5EB77800C9E278 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B010062A2B5EB77800C9E278 /* Preview Assets.xcassets */; };
+		B027AA6E2B5FC233001BCFFB /* Switzer-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA5C2B5FC224001BCFFB /* Switzer-SemiboldItalic.otf */; };
+		B027AA6F2B5FC233001BCFFB /* Switzer-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA5D2B5FC229001BCFFB /* Switzer-Light.otf */; };
+		B027AA702B5FC233001BCFFB /* Switzer-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA5E2B5FC229001BCFFB /* Switzer-Bold.otf */; };
+		B027AA712B5FC233001BCFFB /* Switzer-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA5F2B5FC22E001BCFFB /* Switzer-Italic.otf */; };
+		B027AA722B5FC233001BCFFB /* Switzer-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA602B5FC22F001BCFFB /* Switzer-MediumItalic.otf */; };
+		B027AA732B5FC233001BCFFB /* Switzer-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA612B5FC22F001BCFFB /* Switzer-Black.otf */; };
+		B027AA742B5FC233001BCFFB /* Switzer-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA622B5FC22F001BCFFB /* Switzer-Semibold.otf */; };
+		B027AA752B5FC233001BCFFB /* Switzer-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA632B5FC230001BCFFB /* Switzer-BoldItalic.otf */; };
+		B027AA762B5FC233001BCFFB /* Switzer-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA642B5FC230001BCFFB /* Switzer-Extrabold.otf */; };
+		B027AA772B5FC233001BCFFB /* Switzer-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA652B5FC230001BCFFB /* Switzer-LightItalic.otf */; };
+		B027AA782B5FC233001BCFFB /* Switzer-ExtraboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA662B5FC231001BCFFB /* Switzer-ExtraboldItalic.otf */; };
+		B027AA792B5FC233001BCFFB /* Switzer-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA672B5FC231001BCFFB /* Switzer-Medium.otf */; };
+		B027AA7A2B5FC233001BCFFB /* Switzer-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA682B5FC231001BCFFB /* Switzer-BlackItalic.otf */; };
+		B027AA7B2B5FC233001BCFFB /* Switzer-ExtralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA692B5FC232001BCFFB /* Switzer-ExtralightItalic.otf */; };
+		B027AA7C2B5FC233001BCFFB /* Switzer-Extralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA6A2B5FC232001BCFFB /* Switzer-Extralight.otf */; };
+		B027AA7D2B5FC233001BCFFB /* Switzer-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA6B2B5FC232001BCFFB /* Switzer-Regular.otf */; };
+		B027AA7E2B5FC233001BCFFB /* Switzer-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA6C2B5FC233001BCFFB /* Switzer-ThinItalic.otf */; };
+		B027AA7F2B5FC233001BCFFB /* Switzer-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B027AA6D2B5FC233001BCFFB /* Switzer-Thin.otf */; };
+		B027AA832B5FCFBE001BCFFB /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027AA822B5FCFBE001BCFFB /* IntroView.swift */; };
+		B033BDE72B6005320074E850 /* OnboardView01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033BDE62B6005320074E850 /* OnboardView01.swift */; };
+		B033BDEA2B6141EC0074E850 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033BDE92B6141EC0074E850 /* LoginView.swift */; };
+		B033BDEC2B6141FE0074E850 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033BDEB2B6141FE0074E850 /* SignUpView.swift */; };
+		B033BDF02B61506A0074E850 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033BDEF2B61506A0074E850 /* ButtonModifier.swift */; };
+		B033BDF22B615C6A0074E850 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033BDF12B615C6A0074E850 /* GetStartedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +43,30 @@
 		B01006252B5EB77100C9E278 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B01006272B5EB77800C9E278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B010062A2B5EB77800C9E278 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B027AA5C2B5FC224001BCFFB /* Switzer-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		B027AA5D2B5FC229001BCFFB /* Switzer-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-Light.otf"; sourceTree = "<group>"; };
+		B027AA5E2B5FC229001BCFFB /* Switzer-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-Bold.otf"; sourceTree = "<group>"; };
+		B027AA5F2B5FC22E001BCFFB /* Switzer-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-Italic.otf"; sourceTree = "<group>"; };
+		B027AA602B5FC22F001BCFFB /* Switzer-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-MediumItalic.otf"; sourceTree = "<group>"; };
+		B027AA612B5FC22F001BCFFB /* Switzer-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-Black.otf"; sourceTree = "<group>"; };
+		B027AA622B5FC22F001BCFFB /* Switzer-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-Semibold.otf"; sourceTree = "<group>"; };
+		B027AA632B5FC230001BCFFB /* Switzer-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-BoldItalic.otf"; sourceTree = "<group>"; };
+		B027AA642B5FC230001BCFFB /* Switzer-Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-Extrabold.otf"; sourceTree = "<group>"; };
+		B027AA652B5FC230001BCFFB /* Switzer-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-LightItalic.otf"; sourceTree = "<group>"; };
+		B027AA662B5FC231001BCFFB /* Switzer-ExtraboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-ExtraboldItalic.otf"; sourceTree = "<group>"; };
+		B027AA672B5FC231001BCFFB /* Switzer-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-Medium.otf"; sourceTree = "<group>"; };
+		B027AA682B5FC231001BCFFB /* Switzer-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-BlackItalic.otf"; sourceTree = "<group>"; };
+		B027AA692B5FC232001BCFFB /* Switzer-ExtralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-ExtralightItalic.otf"; sourceTree = "<group>"; };
+		B027AA6A2B5FC232001BCFFB /* Switzer-Extralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-Extralight.otf"; sourceTree = "<group>"; };
+		B027AA6B2B5FC232001BCFFB /* Switzer-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-Regular.otf"; sourceTree = "<group>"; };
+		B027AA6C2B5FC233001BCFFB /* Switzer-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-ThinItalic.otf"; sourceTree = "<group>"; };
+		B027AA6D2B5FC233001BCFFB /* Switzer-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Switzer-Thin.otf"; sourceTree = "<group>"; };
+		B027AA822B5FCFBE001BCFFB /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		B033BDE62B6005320074E850 /* OnboardView01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView01.swift; sourceTree = "<group>"; };
+		B033BDE92B6141EC0074E850 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B033BDEB2B6141FE0074E850 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B033BDEF2B61506A0074E850 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
+		B033BDF12B615C6A0074E850 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +99,11 @@
 		B01006222B5EB77100C9E278 /* Crafty Furniture Ecommerce SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				B01006232B5EB77100C9E278 /* Crafty_Furniture_Ecommerce_SwiftUIApp.swift */,
+				B033BDED2B6150380074E850 /* Utils */,
+				B027AA5B2B5FC1E3001BCFFB /* Fonts */,
+				B01006322B5EB8AD00C9E278 /* App */,
+				B01006332B5EB8C900C9E278 /* Models */,
+				B01006312B5EB8A400C9E278 /* Views */,
 				B01006252B5EB77100C9E278 /* ContentView.swift */,
 				B01006272B5EB77800C9E278 /* Assets.xcassets */,
 				B01006292B5EB77800C9E278 /* Preview Content */,
@@ -65,6 +117,90 @@
 				B010062A2B5EB77800C9E278 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B01006312B5EB8A400C9E278 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B033BDE82B6141CC0074E850 /* AuthViews */,
+				B027AA812B5FCF7F001BCFFB /* WelcomeViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B01006322B5EB8AD00C9E278 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B01006232B5EB77100C9E278 /* Crafty_Furniture_Ecommerce_SwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B01006332B5EB8C900C9E278 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B027AA5B2B5FC1E3001BCFFB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B027AA612B5FC22F001BCFFB /* Switzer-Black.otf */,
+				B027AA682B5FC231001BCFFB /* Switzer-BlackItalic.otf */,
+				B027AA5E2B5FC229001BCFFB /* Switzer-Bold.otf */,
+				B027AA632B5FC230001BCFFB /* Switzer-BoldItalic.otf */,
+				B027AA642B5FC230001BCFFB /* Switzer-Extrabold.otf */,
+				B027AA662B5FC231001BCFFB /* Switzer-ExtraboldItalic.otf */,
+				B027AA6A2B5FC232001BCFFB /* Switzer-Extralight.otf */,
+				B027AA692B5FC232001BCFFB /* Switzer-ExtralightItalic.otf */,
+				B027AA5F2B5FC22E001BCFFB /* Switzer-Italic.otf */,
+				B027AA5D2B5FC229001BCFFB /* Switzer-Light.otf */,
+				B027AA652B5FC230001BCFFB /* Switzer-LightItalic.otf */,
+				B027AA672B5FC231001BCFFB /* Switzer-Medium.otf */,
+				B027AA602B5FC22F001BCFFB /* Switzer-MediumItalic.otf */,
+				B027AA6B2B5FC232001BCFFB /* Switzer-Regular.otf */,
+				B027AA622B5FC22F001BCFFB /* Switzer-Semibold.otf */,
+				B027AA5C2B5FC224001BCFFB /* Switzer-SemiboldItalic.otf */,
+				B027AA6D2B5FC233001BCFFB /* Switzer-Thin.otf */,
+				B027AA6C2B5FC233001BCFFB /* Switzer-ThinItalic.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B027AA812B5FCF7F001BCFFB /* WelcomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				B027AA822B5FCFBE001BCFFB /* IntroView.swift */,
+				B033BDE62B6005320074E850 /* OnboardView01.swift */,
+				B033BDF12B615C6A0074E850 /* GetStartedView.swift */,
+			);
+			path = WelcomeViews;
+			sourceTree = "<group>";
+		};
+		B033BDE82B6141CC0074E850 /* AuthViews */ = {
+			isa = PBXGroup;
+			children = (
+				B033BDE92B6141EC0074E850 /* LoginView.swift */,
+				B033BDEB2B6141FE0074E850 /* SignUpView.swift */,
+			);
+			path = AuthViews;
+			sourceTree = "<group>";
+		};
+		B033BDED2B6150380074E850 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B033BDEE2B6150400074E850 /* CustomModifiers */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B033BDEE2B6150400074E850 /* CustomModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				B033BDEF2B61506A0074E850 /* ButtonModifier.swift */,
+			);
+			path = CustomModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +262,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				B010062B2B5EB77800C9E278 /* Preview Assets.xcassets in Resources */,
+				B027AA6F2B5FC233001BCFFB /* Switzer-Light.otf in Resources */,
+				B027AA7C2B5FC233001BCFFB /* Switzer-Extralight.otf in Resources */,
+				B027AA732B5FC233001BCFFB /* Switzer-Black.otf in Resources */,
+				B027AA6E2B5FC233001BCFFB /* Switzer-SemiboldItalic.otf in Resources */,
+				B027AA742B5FC233001BCFFB /* Switzer-Semibold.otf in Resources */,
+				B027AA782B5FC233001BCFFB /* Switzer-ExtraboldItalic.otf in Resources */,
+				B027AA752B5FC233001BCFFB /* Switzer-BoldItalic.otf in Resources */,
+				B027AA762B5FC233001BCFFB /* Switzer-Extrabold.otf in Resources */,
 				B01006282B5EB77800C9E278 /* Assets.xcassets in Resources */,
+				B027AA7A2B5FC233001BCFFB /* Switzer-BlackItalic.otf in Resources */,
+				B027AA7F2B5FC233001BCFFB /* Switzer-Thin.otf in Resources */,
+				B027AA7B2B5FC233001BCFFB /* Switzer-ExtralightItalic.otf in Resources */,
+				B027AA792B5FC233001BCFFB /* Switzer-Medium.otf in Resources */,
+				B027AA712B5FC233001BCFFB /* Switzer-Italic.otf in Resources */,
+				B027AA772B5FC233001BCFFB /* Switzer-LightItalic.otf in Resources */,
+				B027AA7D2B5FC233001BCFFB /* Switzer-Regular.otf in Resources */,
+				B027AA722B5FC233001BCFFB /* Switzer-MediumItalic.otf in Resources */,
+				B027AA702B5FC233001BCFFB /* Switzer-Bold.otf in Resources */,
+				B027AA7E2B5FC233001BCFFB /* Switzer-ThinItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +292,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B01006262B5EB77100C9E278 /* ContentView.swift in Sources */,
+				B033BDF22B615C6A0074E850 /* GetStartedView.swift in Sources */,
+				B033BDF02B61506A0074E850 /* ButtonModifier.swift in Sources */,
 				B01006242B5EB77100C9E278 /* Crafty_Furniture_Ecommerce_SwiftUIApp.swift in Sources */,
+				B027AA832B5FCFBE001BCFFB /* IntroView.swift in Sources */,
+				B033BDEA2B6141EC0074E850 /* LoginView.swift in Sources */,
+				B033BDEC2B6141FE0074E850 /* SignUpView.swift in Sources */,
+				B033BDE72B6005320074E850 /* OnboardView01.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +430,7 @@
 				DEVELOPMENT_TEAM = LF49R4B4F3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Crafty-Furniture-Ecommerce-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +460,7 @@
 				DEVELOPMENT_TEAM = LF49R4B4F3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Crafty-Furniture-Ecommerce-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
