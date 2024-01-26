@@ -35,6 +35,11 @@
 		B033BDEC2B6141FE0074E850 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033BDEB2B6141FE0074E850 /* SignUpView.swift */; };
 		B033BDF02B61506A0074E850 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033BDEF2B61506A0074E850 /* ButtonModifier.swift */; };
 		B033BDF22B615C6A0074E850 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033BDF12B615C6A0074E850 /* GetStartedView.swift */; };
+		B0F5E4392B627F86006E05BD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5E4382B627F86006E05BD /* MainView.swift */; };
+		B0F5E43B2B627F9C006E05BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5E43A2B627F9C006E05BD /* HomeView.swift */; };
+		B0F5E43D2B627FBF006E05BD /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5E43C2B627FBF006E05BD /* FavouriteView.swift */; };
+		B0F5E43F2B627FDA006E05BD /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5E43E2B627FDA006E05BD /* ShoppingView.swift */; };
+		B0F5E4412B627FEC006E05BD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5E4402B627FEC006E05BD /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +72,11 @@
 		B033BDEB2B6141FE0074E850 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B033BDEF2B61506A0074E850 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		B033BDF12B615C6A0074E850 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
+		B0F5E4382B627F86006E05BD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B0F5E43A2B627F9C006E05BD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B0F5E43C2B627FBF006E05BD /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
+		B0F5E43E2B627FDA006E05BD /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
+		B0F5E4402B627FEC006E05BD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +132,7 @@
 		B01006312B5EB8A400C9E278 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B0F5E4372B627F62006E05BD /* MainViews */,
 				B033BDE82B6141CC0074E850 /* AuthViews */,
 				B027AA812B5FCF7F001BCFFB /* WelcomeViews */,
 			);
@@ -201,6 +212,18 @@
 				B033BDEF2B61506A0074E850 /* ButtonModifier.swift */,
 			);
 			path = CustomModifiers;
+			sourceTree = "<group>";
+		};
+		B0F5E4372B627F62006E05BD /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				B0F5E4382B627F86006E05BD /* MainView.swift */,
+				B0F5E43A2B627F9C006E05BD /* HomeView.swift */,
+				B0F5E43C2B627FBF006E05BD /* FavouriteView.swift */,
+				B0F5E43E2B627FDA006E05BD /* ShoppingView.swift */,
+				B0F5E4402B627FEC006E05BD /* ProfileView.swift */,
+			);
+			path = MainViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,10 +315,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B01006262B5EB77100C9E278 /* ContentView.swift in Sources */,
+				B0F5E4412B627FEC006E05BD /* ProfileView.swift in Sources */,
+				B0F5E4392B627F86006E05BD /* MainView.swift in Sources */,
 				B033BDF22B615C6A0074E850 /* GetStartedView.swift in Sources */,
+				B0F5E43B2B627F9C006E05BD /* HomeView.swift in Sources */,
 				B033BDF02B61506A0074E850 /* ButtonModifier.swift in Sources */,
 				B01006242B5EB77100C9E278 /* Crafty_Furniture_Ecommerce_SwiftUIApp.swift in Sources */,
 				B027AA832B5FCFBE001BCFFB /* IntroView.swift in Sources */,
+				B0F5E43D2B627FBF006E05BD /* FavouriteView.swift in Sources */,
+				B0F5E43F2B627FDA006E05BD /* ShoppingView.swift in Sources */,
 				B033BDEA2B6141EC0074E850 /* LoginView.swift in Sources */,
 				B033BDEC2B6141FE0074E850 /* SignUpView.swift in Sources */,
 				B033BDE72B6005320074E850 /* OnboardView01.swift in Sources */,
