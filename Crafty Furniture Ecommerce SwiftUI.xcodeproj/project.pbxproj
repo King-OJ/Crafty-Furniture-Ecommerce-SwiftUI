@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B003ADCF2B6507DD00EE7C43 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003ADCE2B6507DD00EE7C43 /* ProductDetailsView.swift */; };
+		B003ADD12B65125C00EE7C43 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003ADD02B65125C00EE7C43 /* Model.swift */; };
+		B003ADD42B6527C600EE7C43 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003ADD32B6527C600EE7C43 /* Extension.swift */; };
 		B01006242B5EB77100C9E278 /* Crafty_Furniture_Ecommerce_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01006232B5EB77100C9E278 /* Crafty_Furniture_Ecommerce_SwiftUIApp.swift */; };
 		B01006262B5EB77100C9E278 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01006252B5EB77100C9E278 /* ContentView.swift */; };
 		B01006282B5EB77800C9E278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01006272B5EB77800C9E278 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B003ADCE2B6507DD00EE7C43 /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
+		B003ADD02B65125C00EE7C43 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B003ADD32B6527C600EE7C43 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		B01006202B5EB77100C9E278 /* Crafty Furniture Ecommerce SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crafty Furniture Ecommerce SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01006232B5EB77100C9E278 /* Crafty_Furniture_Ecommerce_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crafty_Furniture_Ecommerce_SwiftUIApp.swift; sourceTree = "<group>"; };
 		B01006252B5EB77100C9E278 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B003ADCD2B65079A00EE7C43 /* ProductViews */ = {
+			isa = PBXGroup;
+			children = (
+				B003ADCE2B6507DD00EE7C43 /* ProductDetailsView.swift */,
+			);
+			path = ProductViews;
+			sourceTree = "<group>";
+		};
+		B003ADD22B6527AB00EE7C43 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B003ADD32B6527C600EE7C43 /* Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B01006172B5EB77100C9E278 = {
 			isa = PBXGroup;
 			children = (
@@ -109,10 +131,10 @@
 		B01006222B5EB77100C9E278 /* Crafty Furniture Ecommerce SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				B033BDED2B6150380074E850 /* Utils */,
 				B027AA5B2B5FC1E3001BCFFB /* Fonts */,
 				B01006322B5EB8AD00C9E278 /* App */,
 				B01006332B5EB8C900C9E278 /* Models */,
+				B033BDED2B6150380074E850 /* Utils */,
 				B01006312B5EB8A400C9E278 /* Views */,
 				B01006252B5EB77100C9E278 /* ContentView.swift */,
 				B01006272B5EB77800C9E278 /* Assets.xcassets */,
@@ -132,8 +154,9 @@
 		B01006312B5EB8A400C9E278 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B0F5E4372B627F62006E05BD /* MainViews */,
 				B033BDE82B6141CC0074E850 /* AuthViews */,
+				B0F5E4372B627F62006E05BD /* MainViews */,
+				B003ADCD2B65079A00EE7C43 /* ProductViews */,
 				B027AA812B5FCF7F001BCFFB /* WelcomeViews */,
 			);
 			path = Views;
@@ -150,6 +173,7 @@
 		B01006332B5EB8C900C9E278 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B003ADD02B65125C00EE7C43 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +225,7 @@
 		B033BDED2B6150380074E850 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B003ADD22B6527AB00EE7C43 /* Extensions */,
 				B033BDEE2B6150400074E850 /* CustomModifiers */,
 			);
 			path = Utils;
@@ -314,17 +339,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B003ADD12B65125C00EE7C43 /* Model.swift in Sources */,
 				B01006262B5EB77100C9E278 /* ContentView.swift in Sources */,
 				B0F5E4412B627FEC006E05BD /* ProfileView.swift in Sources */,
 				B0F5E4392B627F86006E05BD /* MainView.swift in Sources */,
 				B033BDF22B615C6A0074E850 /* GetStartedView.swift in Sources */,
 				B0F5E43B2B627F9C006E05BD /* HomeView.swift in Sources */,
 				B033BDF02B61506A0074E850 /* ButtonModifier.swift in Sources */,
+				B003ADD42B6527C600EE7C43 /* Extension.swift in Sources */,
 				B01006242B5EB77100C9E278 /* Crafty_Furniture_Ecommerce_SwiftUIApp.swift in Sources */,
 				B027AA832B5FCFBE001BCFFB /* IntroView.swift in Sources */,
 				B0F5E43D2B627FBF006E05BD /* FavouriteView.swift in Sources */,
 				B0F5E43F2B627FDA006E05BD /* ShoppingView.swift in Sources */,
 				B033BDEA2B6141EC0074E850 /* LoginView.swift in Sources */,
+				B003ADCF2B6507DD00EE7C43 /* ProductDetailsView.swift in Sources */,
 				B033BDEC2B6141FE0074E850 /* SignUpView.swift in Sources */,
 				B033BDE72B6005320074E850 /* OnboardView01.swift in Sources */,
 			);

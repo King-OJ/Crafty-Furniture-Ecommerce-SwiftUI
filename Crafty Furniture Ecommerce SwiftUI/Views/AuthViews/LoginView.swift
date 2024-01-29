@@ -72,32 +72,25 @@ struct LoginView: View {
                 Button {
                     //
                 } label: {
-                    RoundedRectangle(cornerRadius: 14)
+                    Text("Sign In")
                         .modifier(ButtonModifier())
-                        .overlay(alignment: .center) {
-                            Text("Sign In")
-                                .foregroundColor(.white)
-                                .font(Font.custom("Switzer-Bold", size: 18))
-                                .tracking(2)
-                        }
                 }
                 
                 Button {
                     //
                 } label: {
-                    RoundedRectangle(cornerRadius: 14)
-                        .foregroundColor(.white)
-                        .modifier(ButtonModifier())
-                        .overlay(alignment: .center) {
-                            HStack(spacing: 10) {
-                                Image("GoogleImg")
-                                Text("Sign in with google")
-                                    .foregroundColor(.black)
-                                    .font(Font.custom("Switzer-Medium", size: 18))
-                                    .tracking(2)
-                            }
+                    HStack(spacing: 10) {
+                        Image("GoogleImg")
+                        Text("Sign In with Google")
                             
-                        }
+                    }
+                    .font(Font.custom("Switzer-Medium", size:18))
+                    .frame(maxWidth: .infinity, minHeight: 55)
+                    .background(.white)
+                    .foregroundColor(.black)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .shadow(color: .gray, radius: 0.5, x: 0.2, y: 0)
+                    
                 }
                 
                     

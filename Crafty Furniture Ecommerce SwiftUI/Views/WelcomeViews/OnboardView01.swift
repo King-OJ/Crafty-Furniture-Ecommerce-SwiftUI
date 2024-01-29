@@ -53,15 +53,9 @@ struct OnboardView01: View {
                 Button {
                     //
                 } label: {
-                    RoundedRectangle(cornerRadius: 14)
+                    Text("Add To Card")
                         .modifier(ButtonModifier())
                         .padding(.horizontal)
-                        .overlay(alignment: .center) {
-                            Text("Get Started")
-                                .foregroundColor(.white)
-                                .font(Font.custom("Switzer-Bold", size: 18))
-                                .tracking(2)
-                        }
                 }
 
             }
@@ -101,12 +95,7 @@ struct OnboardView01: View {
     }
 }
 
-struct Feature: Identifiable {
- var image: String
- var text: String
-var tag: Int
- let id = UUID()
-}
+
 
 struct OnboardView01_Previews: PreviewProvider {
     static var previews: some View {
