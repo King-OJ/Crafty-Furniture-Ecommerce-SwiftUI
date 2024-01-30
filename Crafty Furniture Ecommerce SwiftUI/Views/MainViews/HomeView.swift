@@ -125,7 +125,7 @@ struct HomeView: View {
                                     }.padding()
                                 }
                                 .frame(width: 264, height: 130)
-                                .clipShape(RoundedRectangle(cornerRadius: 14))
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
                                 
                                 ZStack(alignment: .topLeading) {
                                     Image("SpecialOffer02")
@@ -191,7 +191,7 @@ struct HomeView: View {
                                         .foregroundColor(filters.firstIndex(of: filter) == activeFilter ? .white : Color("lightGrey"))
                                         .background( filters.firstIndex(of: filter) == activeFilter ? Color("primaryColor") : .white)
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
-                                        .shadow(color: Color("lightGrey"), radius: 1, x: 0, y: 0.5)
+                                        .shadow(color: .gray, radius: 0.5, x: 0.2, y: 0)
                                                
                                         
                                 }
@@ -254,7 +254,7 @@ struct HomeView: View {
                                                 }
                                                 
                                                 HStack {
-                                                    Text("N\(product.price)")
+                                                    Text("$\(Double(product.price).toString(2))")
                                                         .foregroundColor(Color("actionColor"))
                                                         .font(Font.custom("Switzer-Semibold", size: 18))
                                                     
@@ -265,7 +265,7 @@ struct HomeView: View {
                                         }
                                         .frame(width: 220, height: 260)
                                         .background(.white)
-                                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                                        .clipShape(RoundedRectangle(cornerRadius: 20))
                                     }
                                 }
                                 
