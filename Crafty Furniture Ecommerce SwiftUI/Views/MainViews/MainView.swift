@@ -8,27 +8,36 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @State var activeTab = 0
+    
     var body: some View {
-        TabView {
+        TabView(selection: $activeTab) {
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
+                .tag(0)
             
-            FavouriteView()
+            FavouriteView(backToHome: $activeTab)
                 .tabItem {
                     Label("Favourite", systemImage: "heart")
                 }
+                .tag(1)
             
-            ShoppingView()
+            ShoppingView(backToHome: $activeTab)
                 .tabItem {
                     Label("Shopping", systemImage: "cart")
                 }
+                .toolbar(.hidden, for: .tabBar)
+                .tag(2)
             
-            ProfileView()
+            ProfileView(backToHome: $activeTab)
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
+                .toolbar(.hidden, for: .tabBar)
+                .tag(3)
         }
         .tint(Color("primaryColor"))
         

@@ -53,7 +53,7 @@ struct OnboardView01: View {
                 Button {
                     //
                 } label: {
-                    Text("Add To Card")
+                    Text("Get Started")
                         .modifier(ButtonModifier())
                         .padding(.horizontal)
                 }

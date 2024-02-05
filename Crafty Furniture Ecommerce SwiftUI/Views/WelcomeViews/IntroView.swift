@@ -8,20 +8,36 @@
 import SwiftUI
 
 struct IntroView: View {
+    
+    @State var showOnboardView = false
+    
     var body: some View {
-        ZStack {
-            Color("primaryColor")
+        NavigationStack {
+                ZStack {
+                    Color("primaryColor")
+                    
+                    VStack(spacing: 20) {
+                        Image("Crafty Furniture")
+                        
+                        Text("Crafty Furniture")
+                            .font(Font.custom("Switzer-Semibold", size: 25))
+                            .foregroundColor(.white)
+                        
+                    }
+                }
+                .navigationDestination(isPresented: $showOnboardView, destination: {
+                    OnboardView01()
+                        .navigationBarBackButtonHidden(true)
+                })
+                .ignoresSafeArea()
+                
             
-            VStack(spacing: 20) {
-                Image("Crafty Furniture")
-                
-                Text("Crafty Furniture")
-                    .font(Font.custom("Switzer-Semibold", size: 25))
-                    .foregroundColor(.white)
-                
-            }
         }
-        .ignoresSafeArea()
+        .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        self.showOnboardView.toggle()
+                    }
+                }
     }
 }
 

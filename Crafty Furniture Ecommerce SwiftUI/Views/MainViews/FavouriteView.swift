@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FavouriteView: View {
+    @Binding var backToHome: Int
     
     @State private var productList = [ Product(productImg: "favouriteImg01", name: "Rotating Lounge Chair", subtitle: "Hans j. wegner", price: 39, seenBy: 391, likedBy: 294, description: "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.", rating: 4),
                                     Product(productImg: "favouriteImg02", name: "Trapeziam Arm Chair", subtitle: "Hans j. wegner", price: 36, seenBy: 5591, likedBy: 413, description: "This is a dummy text. I could'nt come up with a product description but am sure this will do. Doesn't really say much but I can't find a lorem Ipsum text for now", rating: 2),
@@ -16,13 +17,11 @@ struct FavouriteView: View {
                                        Product(productImg: "mostInterested01", name: "Ox Mathis Furniture Modern Style", subtitle: "Hans j. wegner", price: 35.55, seenBy: 391, likedBy: 294, description: "Here's another dummy text for this product. Again, I could'nt come up with a product description but am sure this will do. Doesn't really say much but I can't find a lorem Ipsum text for now", rating: 6)
     ]
     
-    @Environment(\.dismiss) var dismiss
-    
-    private let flexibleColumn = [
+     let flexibleColumn = [
         GridItem(.flexible(minimum: 100, maximum: 200), spacing: 8),
         GridItem(.flexible(minimum: 100, maximum: 200), spacing: 8),
        ]
-    private var data  = Array(1...20)
+    
     
     var body: some View {
         NavigationStack {
@@ -47,14 +46,19 @@ struct FavouriteView: View {
 
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {
-                            dismiss()
+                            withAnimation(.easeInOut(duration: 4)) {
+                                backToHome = 0
+                            }
+                            
                         }, label: {
                             Image(systemName: "chevron.left")
                                 .padding()
                                 .foregroundColor(.black)
                                 .background(.white)
                                 .clipShape(Circle())
-                        })
+                        }
+                        )
+                        
                     }
 
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -76,6 +80,6 @@ struct FavouriteView: View {
 
 struct FavouriteView_Previews: PreviewProvider {
     static var previews: some View {
-        FavouriteView()
+        FavouriteView(backToHome: MainView().$activeTab)
     }
 }
