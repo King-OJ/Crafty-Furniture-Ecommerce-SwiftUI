@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    
     @Binding var backToHome: Int
     
     @State private var listOptions = [["Account", "person"], ["Payment Methods", "creditcard"], ["Order History", "list.clipboard"], ["Delivery Address", "location"], ["Support Center", "questionmark.bubble"], ["Legal Policy", "book"]]
@@ -65,15 +66,16 @@ struct ProfileView: View {
                     
                     Spacer()
                     
-                    Button {
-                        //
-                    } label: {
+                    NavigationLink(destination: GetStartedView()
+                        .navigationBarBackButtonHidden(true)
+                        .toolbar(.hidden, for: .tabBar)) {
                         Text("Logout")
                             .foregroundColor(.red)
                             .font(Font.custom("Switzer-Bold", size: 20))
                             .tracking(2)
-                    }
-                    .padding(.bottom, 50)
+                        }.padding(.bottom, 50)
+                    
+                    
 
                     
                 }
@@ -103,18 +105,14 @@ struct ProfileView: View {
                         
                     }
 
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Image(systemName: "heart")
-                            .padding()
-                            .background(.white)
-                            .clipShape(Circle())
-                    }
+                    
                 })
                 
                 
            
             
         }
+        
     }
 }
 

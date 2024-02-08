@@ -11,7 +11,7 @@ import SwiftUI
 struct Crafty_Furniture_Ecommerce_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            ContentView()
         }
     }
 }

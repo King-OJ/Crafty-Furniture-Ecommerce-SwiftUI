@@ -12,7 +12,7 @@ struct ButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(Font.custom("Switzer-Medium", size:18))
-            .frame(maxWidth: .infinity, minHeight: 55)
+            .frame(width: UIScreen.main.bounds.width - 32, height: 48)
             .background(Color("primaryColor"))
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 15))

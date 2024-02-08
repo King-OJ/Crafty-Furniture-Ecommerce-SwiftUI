@@ -9,16 +9,8 @@ import SwiftUI
 
 struct GetStartedView: View {
     
-    @State var isNewMember = false
-    
     var body: some View {
-        if isNewMember {
-            SignUpView(showSignUp: $isNewMember)
-        }
-        else {
-            LoginView(showSignUp: $isNewMember)
-        }
-        
+       LoginView()
     }
 }
 

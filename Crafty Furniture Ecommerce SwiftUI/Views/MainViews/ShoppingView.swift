@@ -137,7 +137,7 @@ struct ShoppingView: View {
                             NavigationLink(destination: CheckoutView().toolbar(.hidden, for: .tabBar)) {
                                 Text("Check out")
                                     .modifier(ButtonModifier())
-                            }
+                                }
                            
 
                         }.padding()
