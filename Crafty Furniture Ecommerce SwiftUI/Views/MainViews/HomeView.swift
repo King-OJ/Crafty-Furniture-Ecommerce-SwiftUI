@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @EnvironmentObject var viewModel: AuthViewModel
     @State private var searchText=""
     @State private var activeFilter = 0
     
@@ -21,14 +22,15 @@ struct HomeView: View {
     
     var body: some View {
         
-        NavigationStack {
+        if let user = viewModel.currentUser {
+            NavigationStack {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack (spacing: 20) {
                     //user info and notification section
                     HStack {
                         HStack(spacing: 12) {
-                            Image("profile-pic")
+                            Image(user.profileImage)
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 48, height: 48)
@@ -39,7 +41,7 @@ struct HomeView: View {
                                     .foregroundColor(Color("lightGrey"))
                                     .font(Font.custom("Switzer-Regular", size: 13))
                                 
-                                Text("King OJ")
+                                Text(user.fullname)
                                     .font(Font.custom("Switzer-Medium", size: 16))
                             }
                         }
@@ -74,7 +76,7 @@ struct HomeView: View {
                                     .foregroundColor(Color("lightGrey"))
                                 
                             }.padding(.horizontal, 6)
-                                
+                            
                         }
                     
                     //special offer section
@@ -120,7 +122,7 @@ struct HomeView: View {
                                                 }
                                         }
                                         .frame(width: 92, height: 34)
-
+                                        
                                         
                                     }.padding()
                                 }
@@ -168,9 +170,9 @@ struct HomeView: View {
                                 
                             }
                         }
-           
-
-                        }
+                        
+                        
+                    }
                     
                     //scrollview filters section
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -192,15 +194,15 @@ struct HomeView: View {
                                         .background( filters.firstIndex(of: filter) == activeFilter ? Color("primaryColor") : .white)
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
                                         .shadow(color: .gray, radius: 0.5, x: 0.2, y: 0)
-                                               
-                                        
+                                    
+                                    
                                 }
                             }
                             
-                           
+                            
                             
                         }
-                            
+                        
                     }
                     
                     //most interested section
@@ -271,7 +273,7 @@ struct HomeView: View {
                                 
                             }
                             
-                           
+                            
                         }
                     }
                     
@@ -317,7 +319,7 @@ struct HomeView: View {
                                                 .font(Font.custom("Switzer-Semibold", size: 15))
                                                 .padding(.vertical, 10)
                                             
-                                           
+                                            
                                         }
                                     }
                                     .padding()
@@ -351,7 +353,7 @@ struct HomeView: View {
                                                 .font(Font.custom("Switzer-Semibold", size: 15))
                                                 .padding(.vertical, 10)
                                             
-                                           
+                                            
                                         }
                                     }
                                     .padding()
@@ -363,7 +365,7 @@ struct HomeView: View {
                                 
                             }
                             
-                           
+                            
                         }
                     }
                     
@@ -377,8 +379,9 @@ struct HomeView: View {
             }
             .background(Color("offWhite"))
             .ignoresSafeArea()
+            }
+        
         }
-            
     }
 }
 
@@ -387,5 +390,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(AuthViewModel())
     }
 }

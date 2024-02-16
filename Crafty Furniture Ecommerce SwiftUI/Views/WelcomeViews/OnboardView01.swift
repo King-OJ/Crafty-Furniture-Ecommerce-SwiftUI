@@ -46,7 +46,7 @@ struct OnboardView01: View {
                 .frame( height: 620)
                 .tabViewStyle(.page)
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
-                .onChange(of: currentIndex) { value in print("current index = \(value)") }
+//                .onChange(of: currentIndex) { value in print("current index = \(value)") }
                 
                 Spacer()
                 

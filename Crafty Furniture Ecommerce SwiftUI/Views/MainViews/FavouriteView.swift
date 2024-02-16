@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavouriteView: View {
-    @Binding var backToHome: Int
+    @Binding var backToHome: MainView.Tab
     
     @State private var productList = [ Product(productImg: "favouriteImg01", name: "Rotating Lounge Chair", subtitle: "Hans j. wegner", price: 39, seenBy: 391, likedBy: 294, description: "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.", rating: 4),
                                     Product(productImg: "favouriteImg02", name: "Trapeziam Arm Chair", subtitle: "Hans j. wegner", price: 36, seenBy: 5591, likedBy: 413, description: "This is a dummy text. I could'nt come up with a product description but am sure this will do. Doesn't really say much but I can't find a lorem Ipsum text for now", rating: 2),
@@ -24,57 +24,31 @@ struct FavouriteView: View {
     
     
     var body: some View {
-        NavigationStack {
+        
+        VStack {
             ScrollView(.vertical, showsIndicators: false){
-  
-                LazyVGrid(columns: flexibleColumn, spacing: 20) {
-                    ForEach(productList) { product in
-                        NavigationLink(destination: ProductDetailsView(product: product)
-                            .toolbar(.hidden, for: .tabBar)
-                            .navigationBarBackButtonHidden(true)
-                        ){
-                            SingleProductView(furniture: product)
-                            
-                        }
-                    }
-                }
-                .padding(.horizontal)
-                .padding(.vertical, 110)
-                .navigationTitle("Favourite")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar(content: {
-
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: {
-                            withAnimation(.easeInOut(duration: 4)) {
-                                backToHome = 0
+      
+                    LazyVGrid(columns: flexibleColumn, spacing: 20) {
+                        ForEach(productList) { product in
+                            NavigationLink(destination: ProductDetailsView(product: product)
+                                .toolbar(.hidden, for: .tabBar)
+                                .navigationBarBackButtonHidden(true)
+                            ){
+                                SingleProductView(furniture: product)
+                                
                             }
-                            
-                        }, label: {
-                            Image(systemName: "chevron.left")
-                                .padding()
-                                .foregroundColor(.black)
-                                .background(.white)
-                                .clipShape(Circle())
                         }
-                        )
-                        
                     }
-
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Image(systemName: "heart")
-                            .padding()
-                            .background(.white)
-                            .clipShape(Circle())
-                    }
-                })
+                    .padding(.horizontal)
+                    .padding(.vertical, 110)
+                    
+                    
+                }
                 
-                
-            }
-            .frame(maxWidth: .infinity)
+        }.frame(maxWidth: .infinity)
             .background(Color("offWhite"))
             .ignoresSafeArea()
-        }
+        
     }
 }
 

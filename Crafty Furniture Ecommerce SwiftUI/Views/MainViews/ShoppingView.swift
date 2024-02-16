@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ShoppingView: View {
     
-    @Binding var backToHome: Int
+    @Binding var backToHome: MainView.Tab
     
     @State private var shoppingList = [ Product(productImg: "shoppingImg01", name: "Minimalist Chair", subtitle: "Regal Do Lobo", price: 279.95, seenBy: 391, likedBy: 294, description: "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.", rating: 4),
                                         Product(productImg: "shoppingImg02", name: "Hallingdal Chair", subtitle: "Hallingdal Chair", price: 258.91, seenBy: 5591, likedBy: 413, description: "This is a dummy text. I could'nt come up with a product description but am sure this will do. Doesn't really say much but I can't find a lorem Ipsum text for now", rating: 2),
@@ -21,72 +21,69 @@ struct ShoppingView: View {
     ]
     
     var body: some View {
-        NavigationStack {
+
             VStack {
-                VStack(alignment: .center, spacing: 10) {
-                    ScrollView(.vertical, showsIndicators: false) {
-                        ForEach(shoppingList) { list in
-                            ZStack{
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    ForEach(shoppingList) { list in
+                        ZStack{
+                            HStack {
                                 HStack {
-                                    HStack {
-                                        ZStack {
-                                            Image(list.productImg)
-                                                .resizable()
-                                                .scaledToFill()
-                                        }
-                                        .frame(width: 72, height: 72)
-                                        .background(Color("offWhite"))
-                                        .clipShape(RoundedRectangle(cornerRadius: 14))
-                                        
-                                        
-                                        VStack(alignment: .leading, spacing: 3) {
-                                            Text(list.name)
-                                                .font(Font.custom("Switzer-Bold", size: 15))
-                                            
-                                            Text(list.subtitle)
-                                                .font(Font.custom("Switzer-Medium", size: 13))
-                                                .foregroundColor(Color("lightGrey"))
-                                            
-                                            Text("$\(Double(list.price).toString(2))")
-                                                .foregroundColor(Color("actionColor"))
-                                                .font(Font.custom("Switzer-Semibold", size: 15))
-                                                .padding(.vertical, 10)
-                                            
-                                           
-                                        }
+                                    ZStack {
+                                        Image(list.productImg)
+                                            .resizable()
+                                            .scaledToFill()
                                     }
+                                    .frame(width: 72, height: 72)
+                                    .background(Color("offWhite"))
+                                    .clipShape(RoundedRectangle(cornerRadius: 14))
                                     
-                                    Spacer()
                                     
-                                    HStack(spacing: 10) {
+                                    VStack(alignment: .leading, spacing: 3) {
+                                        Text(list.name)
+                                            .font(Font.custom("Switzer-Bold", size: 15))
                                         
-                                        Text("-")
-                                            .padding(8)
-                                            .background(Color("lightGrey"))
-                                            .opacity(0.5)
-                                            .foregroundColor(.black)
-                                            .font(.title2)
-                                            .clipShape(Circle())
+                                        Text(list.subtitle)
+                                            .font(Font.custom("Switzer-Medium", size: 13))
+                                            .foregroundColor(Color("lightGrey"))
                                         
-                                        Text("04")
-                                            .font(Font.custom("Switzer-Medium", size: 18))
+                                        Text("$\(Double(list.price).toString(2))")
+                                            .foregroundColor(Color("actionColor"))
+                                            .font(Font.custom("Switzer-Semibold", size: 15))
+                                            .padding(.vertical, 10)
                                         
-                                        Text("+")
-                                            .padding(8)
-                                            .background(Color("primaryColor"))
-                                            .foregroundColor(.white)
-                                            .font(.title2)
-                                            .clipShape(Circle())
+                                       
                                     }
-                                }.padding()
-                            }
-                            .frame(maxWidth: .infinity, maxHeight: 120)
-                            .background(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 14))
+                                }
+                                
+                                Spacer()
+                                
+                                HStack(spacing: 10) {
+                                    
+                                    Text("-")
+                                        .padding(8)
+                                        .background(Color("lightGrey"))
+                                        .opacity(0.5)
+                                        .foregroundColor(.black)
+                                        .font(.title2)
+                                        .clipShape(Circle())
+                                    
+                                    Text("04")
+                                        .font(Font.custom("Switzer-Medium", size: 18))
+                                    
+                                    Text("+")
+                                        .padding(8)
+                                        .background(Color("primaryColor"))
+                                        .foregroundColor(.white)
+                                        .font(.title2)
+                                        .clipShape(Circle())
+                                }
+                            }.padding()
                         }
+                        .frame(maxWidth: .infinity, maxHeight: 120)
+                        .background(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 14))
                     }
-                    
-                    
                 }.padding(.horizontal)
                 
                 Spacer()
@@ -145,33 +142,10 @@ struct ShoppingView: View {
                     .frame(maxHeight: 268)
             }
             .padding(.top, 110)
-            .navigationTitle("Shopping")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar(content: {
-
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        backToHome = 0
-                    }, label: {
-                        Image(systemName: "chevron.left")
-                            .padding()
-                            .foregroundColor(.black)
-                            .background(.white)
-                            .clipShape(Circle())
-                    })
-                }
-
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Image(systemName: "trash")
-                        .padding()
-                        .background(.white)
-                        .clipShape(Circle())
-                }
-            })
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("offWhite"))
             .ignoresSafeArea()
-        }
+
     }
 }
 

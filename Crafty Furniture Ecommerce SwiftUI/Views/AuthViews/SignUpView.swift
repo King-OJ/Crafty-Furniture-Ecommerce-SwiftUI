@@ -15,6 +15,7 @@ struct SignUpView: View {
     @State private var password = ""
     @State private var confirmPassword = ""
     
+    @EnvironmentObject var viewModel: AuthViewModel
     @Environment (\.dismiss) var dismiss
     
     var body: some View {
@@ -61,7 +62,10 @@ struct SignUpView: View {
                     }.padding(.vertical, 8)
                     
                     Button {
-                        print(name, email, password, confirmPassword)
+                        Task {
+                            try await viewModel.createUser(email: email, fullname: name, password: password)
+                        }
+                        
                     } label: {
                         Text("Sign Up")
                             .modifier(ButtonModifier())

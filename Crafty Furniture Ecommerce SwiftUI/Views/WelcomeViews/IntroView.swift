@@ -9,10 +9,13 @@ import SwiftUI
 
 struct IntroView: View {
     
+    @EnvironmentObject var viewModel: AuthViewModel
     @State var showOnboardView = false
+    
     
     var body: some View {
         NavigationStack {
+                
                 ZStack {
                     Color("primaryColor")
                     
@@ -22,19 +25,32 @@ struct IntroView: View {
                         Text("Crafty Furniture")
                             .font(Font.custom("Switzer-Semibold", size: 25))
                             .foregroundColor(.white)
-                        
+   
                     }
+                    
                 }
                 .navigationDestination(isPresented: $showOnboardView, destination: {
-                    OnboardView01()
-                        .navigationBarBackButtonHidden(true)
-                })
+                    Group {
+                        if viewModel.userSession != nil {
+                            MainView()
+                                .navigationBarBackButtonHidden(true)
+                        }
+                        else {
+                            SignUpView()
+                                .navigationBarBackButtonHidden(true)
+                        }
+                    }
+                    
+                    
+                }
+                
+                )
                 .ignoresSafeArea()
                 
             
         }
         .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                         self.showOnboardView.toggle()
                     }
                 }
@@ -44,5 +60,7 @@ struct IntroView: View {
 struct IntroView_Previews: PreviewProvider {
     static var previews: some View {
         IntroView()
+            .environmentObject(AuthViewModel())
+            
     }
 }

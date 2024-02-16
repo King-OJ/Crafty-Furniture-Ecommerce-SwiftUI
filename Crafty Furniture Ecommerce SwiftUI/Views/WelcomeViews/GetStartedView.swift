@@ -16,6 +16,6 @@ struct GetStartedView: View {
 
 struct GetStartedView_Previews: PreviewProvider {
     static var previews: some View {
-        GetStartedView()
+        LoginView()
     }
 }

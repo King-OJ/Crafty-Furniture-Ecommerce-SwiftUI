@@ -8,110 +8,79 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     
+    @Binding var backToHome: MainView.Tab
     
-    @Binding var backToHome: Int
+    @State private var listOptions = [["Account", "person"], ["Payment Methods", "creditcard"], ["Order History", "list.clipboard"], ["Delivery Address", "location"], ["Support Center", "questionmark.bubble"], ["Legal Policy", "book"], ["Logout","rectangle.portrait.and.arrow.right"]]
     
-    @State private var listOptions = [["Account", "person"], ["Payment Methods", "creditcard"], ["Order History", "list.clipboard"], ["Delivery Address", "location"], ["Support Center", "questionmark.bubble"], ["Legal Policy", "book"]]
+  
     
     var body: some View {
-        NavigationStack {
-  
-                VStack(spacing: 12) {
-                    VStack(spacing: 6) {
-                        Image("profile-pic")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 48, height: 48)
-                            .clipShape(Circle())
-                        
-                        Text("King OJ")
-                            .font(Font.custom("Switzer-Semibold", size: 20))
-                            .tracking(1)
-                        
-                        Text("talk2clemzy1@gmail.com")
-                            .tint(Color("lightGrey"))
-                            .font(Font.custom("Switzer-Regular", size: 18))
-                    }
+      
+        
+            VStack(spacing: 12) {
+                VStack(spacing: 6) {
+                    Image(viewModel.currentUser!.profileImage)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 48, height: 48)
+                        .clipShape(Circle())
                     
-                    List {
-                        ForEach(listOptions, id: \.self) { list in
-                            HStack{
-                                
-                                Label {
-                                    Text(list[0])
-                                        
-                                } icon: {
-                                    Image(systemName: list[1])
-                                        .foregroundColor(Color("lightGrey"))
-                                }
-
-                            }
-                            .font(Font.custom("Switzer-Regular", size: 18))
-                            .listRowSeparator(.hidden)
-                            .listRowBackground(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .foregroundColor(.white)
-                                    .padding(.vertical, 6)
-                            )
-                            
-                        }
-                        .padding(.vertical)
-                        
-                        
-                    }
-                    .padding(.top, 20)
-                    .listStyle(PlainListStyle())
-                    .scrollContentBackground(.hidden)
+                    Text(viewModel.currentUser!.fullname)
+                        .font(Font.custom("Switzer-Semibold", size: 20))
+                        .tracking(1)
                     
-                    Spacer()
-                    
-                    NavigationLink(destination: GetStartedView()
-                        .navigationBarBackButtonHidden(true)
-                        .toolbar(.hidden, for: .tabBar)) {
-                        Text("Logout")
-                            .foregroundColor(.red)
-                            .font(Font.custom("Switzer-Bold", size: 20))
-                            .tracking(2)
-                        }.padding(.bottom, 50)
-                    
-                    
-
-                    
+                    Text(viewModel.currentUser!.email)
+                        .foregroundColor(Color("lightGrey"))
+                        .font(Font.custom("Switzer-Regular", size: 16))
+                        .tracking(1)
                 }
-                .padding(.horizontal)
-                .padding(.top, 110)
-                .navigationTitle("Profile")
-                .navigationBarTitleDisplayMode(.inline)
-                .background(Color("offWhite"))
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .ignoresSafeArea()
-                .toolbar(content: {
-
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: {
-                            withAnimation(.easeInOut(duration: 4)) {
-                                backToHome = 0
+                
+                List {
+                    ForEach(listOptions, id: \.self) { list in
+                        HStack{
+                            
+                            Label {
+                                Text(list[0])
+                                
+                            } icon: {
+                                Image(systemName: list[1])
+                                    .foregroundColor(Color("lightGrey"))
                             }
                             
-                        }, label: {
-                            Image(systemName: "chevron.left")
-                                .padding()
-                                .foregroundColor(.black)
-                                .background(.white)
-                                .clipShape(Circle())
                         }
+                        .font(Font.custom("Switzer-Regular", size: 18))
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(.white)
+                                .padding(.vertical, 6)
                         )
                         
                     }
-
+                    .padding(.vertical)
                     
-                })
+                    
+                }
+                .padding(.top, 20)
+                .listStyle(PlainListStyle())
+                .scrollContentBackground(.hidden)
                 
                 
-           
+                
+                
+                
+                
+                
+                
+            }
+            .padding(.horizontal)
+            .padding(.top, 90)
+            .background(Color("offWhite"))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .ignoresSafeArea()
             
-        }
         
     }
 }
@@ -119,5 +88,6 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView(backToHome: MainView().$activeTab)
+            .environmentObject(AuthViewModel())
     }
 }
